@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Protection Plan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .intro {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            font-size: 1.05rem;
+        }
+        
+        .intro strong {
+            color: #2c3e50;
+        }
+        
+        .plan-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 25px;
+            width: 100%;
+            max-width: 350px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            height: 70px;
+            width: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        
+        .card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            border-bottom: 2px solid #f1f1f1;
+            padding-bottom: 8px;
+        }
+        
+        .card p {
+            color: #555;
+            font-size: 1rem;
+        }
+        
+        .card-highlight {
+            background-color: #fffbf0;
+            border-top: 4px solid #f39c12;
+        }
+        
+        .card-highlight .card-icon {
+            background-color: #fef5e7;
+            color: #f39c12;
+        }
+        
+        .card-medical {
+            border-top: 4px solid #e74c3c;
+        }
+        
+        .card-medical .card-icon {
+            background-color: #fdedec;
+            color: #e74c3c;
+        }
+        
+        .card-baggage {
+            border-top: 4px solid #3498db;
+        }
+        
+        .card-baggage .card-icon {
+            background-color: #ebf5fb;
+            color: #3498db;
+        }
+        
+        .card-delay {
+            border-top: 4px solid #9b59b6;
+        }
+        
+        .card-delay .card-icon {
+            background-color: #f4ecf7;
+            color: #9b59b6;
+        }
+        
+        .card-assistance {
+            border-top: 4px solid #1abc9c;
+        }
+        
+        .card-assistance .card-icon {
+            background-color: #e8f8f5;
+            color: #1abc9c;
+        }
+        
+        .card-24-7 {
+            border-top: 4px solid #2c3e50;
+        }
+        
+        .card-24-7 .card-icon {
+            background-color: #ebedef;
+            color: #2c3e50;
+        }
+        
+        .features-list {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+        
+        .features-list li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+        
+        .highlight-text {
+            background-color: #fef9e7;
+            padding: 8px 12px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 0.95rem;
+            border-left: 3px solid #f1c40f;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .plan-highlights {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .card {
+                max-width: 100%;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Travel Protection Plan</h1>
+            <p class="subtitle">Comprehensive coverage for your travels</p>
+            <div class="intro">
+                <p><strong>Travel protection plans by General</strong> offer valuable coverage to safeguard your trip and provide assistance in case of unexpected events. Take a glance at the key benefits below.</p>
+            </div>
+        </header>
+        
+        <div class="plan-highlights">
+            <!-- Trip Cancellation Card -->
+            <div class="card card-highlight">
+                <div class="card-icon">
+                    <i class="fas fa-plane-slash"></i>
+                </div>
+                <h3>Trip Cancellation or Interruption</h3>
+                <p>Covers non-refundable trip expenses if you cancel or cut it short due to covered reasons.</p>
+            </div>
+            
+            <!-- Emergency Medical Card -->
+            <div class="card card-medical">
+                <div class="card-icon">
+                    <i class="fas fa-stethoscope"></i>
+                </div>
+                <h3>Emergency Medical Coverage</h3>
+                <p>Pays for medical treatment if you fall ill or get injured during a trip, where regular health insurance may not cover.</p>
+            </div>
+            
+            <!-- Baggage Assistance Card -->
+            <div class="card card-baggage">
+                <div class="card-icon">
+                    <i class="fas fa-suitcase"></i>
+                </div>
+                <h3>Lost or Delayed Bag? BagAssist Can Help</h3>
+                <p>Report missing baggage to the airline for a claim number. BagAssist tracks its location and updates you until returned.</p>
+                <div class="highlight-text">
+                    <i class="fas fa-info-circle"></i> Remember to get a claim number from the airline first.
+                </div>
+            </div>
+            
+            <!-- Travel Delay Card -->
+            <div class="card card-delay">
+                <div class="card-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Travel Delay Expenses</h3>
+                <p>Reimburses food, lodging, & transport if delayed by weather, airlines, or other issues.</p>
+            </div>
+            
+            <!-- Emergency Assistance Card -->
+            <div class="card card-assistance">
+                <div class="card-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <h3>Emergency Assistance</h3>
+                <p>Call the medical emergency hotline for:</p>
+                <ul class="features-list">
+                    <li>Local, same language-speaking doctors</li>
+                    <li>Help for companions' return</li>
+                    <li>Up to $500 emergency cash (with repayment)</li>
+                    <li>Local legal/bail support (fees on you)</li>
+                </ul>
+            </div>
+            
+            <!-- 24/7 Assistance Card -->
+            <div class="card card-24-7">
+                <div class="card-icon">
+                    <i class="fas fa-globe-americas"></i>
+                </div>
+                <h3>24/7 Assistance Services</h3>
+                <p>Third-party plans offer global hotlines for travel, medical, or legal emergencies anytime.</p>
+                <div class="highlight-text">
+                    <i class="fas fa-headset"></i> Available anywhere in the world, 24 hours a day.
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Travel Protection Plan Infographic | Based on General Travel Protection Plans</p>
+            <p>This is a visual representation of travel insurance benefits. Always review policy details before purchasing.</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Add subtle hover animations to cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card');
+            
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    const icon = this.querySelector('.card-icon i');
+                    if (icon) {
+                        icon.style.transform = 'scale(1.1)';
+                        icon.style.transition = 'transform 0.3s ease';
+                    }
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    const icon = this.querySelector('.card-icon i');
+                    if (icon) {
+                        icon.style.transform = 'scale(1)';
+                    }
+                });
+            });
+            
+            // Add a simple click effect
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    this.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
