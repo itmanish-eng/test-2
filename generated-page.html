@@ -1,0 +1,490 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wizfair - Complete Travel Protection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #e4e4e7; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #d4d4d8; }
+        
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        
+        .bg-grid-pattern {
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-white text-zinc-900 antialiased selection:bg-blue-100 selection:text-blue-900">
+
+    <!-- Floating Navigation -->
+    <nav class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
+        <div class="bg-white/90 backdrop-blur-md border border-zinc-200/60 shadow-xl shadow-zinc-200/20 rounded-full px-5 py-2.5 flex items-center gap-8 max-w-5xl w-full justify-between transition-all hover:border-zinc-300">
+            <div class="flex items-center gap-2 text-blue-600">
+                <div class="bg-blue-50 p-1.5 rounded-full">
+                    <iconify-icon icon="solar:shield-star-linear" width="20" height="20"></iconify-icon>
+                </div>
+                <span class="font-semibold tracking-tight text-zinc-900 text-lg">Wizfair</span>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-500">
+                <a href="#" class="hover:text-zinc-900 transition-colors flex items-center gap-1">
+                    Coverage <iconify-icon icon="solar:alt-arrow-down-linear" width="10"></iconify-icon>
+                </a>
+                <a href="#" class="hover:text-zinc-900 transition-colors">Claims Center</a>
+                <a href="#" class="hover:text-zinc-900 transition-colors">Resources</a>
+                <a href="#" class="hover:text-zinc-900 transition-colors">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <div class="flex items-center gap-2 text-xs font-medium text-zinc-500 pr-4 border-r border-zinc-200 hidden lg:flex">
+                    <iconify-icon icon="solar:phone-calling-linear" width="16"></iconify-icon>
+                    <span>1-844-877-3042</span>
+                </div>
+                <button class="bg-zinc-900 hover:bg-zinc-800 text-white text-xs font-medium px-5 py-2.5 rounded-full transition-transform active:scale-95 flex items-center gap-2 shadow-lg shadow-zinc-900/10">
+                    <iconify-icon icon="solar:user-circle-linear" width="16"></iconify-icon>
+                    Sign In
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="relative pt-36 pb-20 overflow-hidden">
+        <!-- Background Decor -->
+        <div class="absolute inset-0 z-0 bg-grid-pattern opacity-[0.5] pointer-events-none"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-gradient-to-b from-blue-50 to-transparent rounded-[100%] blur-3xl pointer-events-none -z-10"></div>
+
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-zinc-200 text-zinc-600 text-xs font-medium mb-8 shadow-sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+                    <span>Generali Global Assistance Partner</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-semibold tracking-tight text-zinc-900 mb-6 leading-[1.05]">
+                    Travel with <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">certainty</span>.
+                </h1>
+                <p class="text-lg text-zinc-500 font-light max-w-xl mx-auto leading-relaxed">
+                    Protect your trip investment with comprehensive coverage. Instant quotes, medical protection, and 24/7 global support.
+                </p>
+            </div>
+
+            <!-- Modern Search Interface -->
+            <div class="bg-white rounded-2xl shadow-2xl shadow-zinc-200/50 border border-zinc-200 p-2 max-w-5xl mx-auto relative z-20">
+                <form class="grid grid-cols-1 lg:grid-cols-12 gap-2">
+                    
+                    <!-- Destination -->
+                    <div class="lg:col-span-4 bg-zinc-50 rounded-xl p-3 border border-transparent hover:border-zinc-200 hover:bg-white transition-all group cursor-text relative focus-within:ring-2 ring-blue-100 ring-offset-2">
+                        <label class="block text-[10px] uppercase tracking-wider font-semibold text-zinc-400 mb-1 pl-1">Destination</label>
+                        <div class="flex items-center gap-3">
+                            <iconify-icon icon="solar:map-point-linear" class="text-zinc-400 shrink-0"></iconify-icon>
+                            <input type="text" placeholder="Where are you going?" class="bg-transparent w-full outline-none text-sm text-zinc-900 placeholder:text-zinc-400 font-medium truncate">
+                        </div>
+                    </div>
+
+                    <!-- Dates -->
+                    <div class="lg:col-span-3 bg-zinc-50 rounded-xl p-3 border border-transparent hover:border-zinc-200 hover:bg-white transition-all group focus-within:ring-2 ring-blue-100 ring-offset-2">
+                        <label class="block text-[10px] uppercase tracking-wider font-semibold text-zinc-400 mb-1 pl-1">Trip Dates</label>
+                        <div class="flex items-center gap-2">
+                            <iconify-icon icon="solar:calendar-date-linear" class="text-zinc-400 shrink-0"></iconify-icon>
+                            <input type="text" placeholder="Start - End Date" class="bg-transparent w-full outline-none text-sm text-zinc-900 placeholder:text-zinc-400 font-medium">
+                        </div>
+                    </div>
+
+                    <!-- Travelers & Cost -->
+                    <div class="lg:col-span-3 bg-zinc-50 rounded-xl p-3 border border-transparent hover:border-zinc-200 hover:bg-white transition-all group flex gap-0 relative">
+                        <div class="w-1/2 border-r border-zinc-200 pr-2">
+                            <label class="block text-[10px] uppercase tracking-wider font-semibold text-zinc-400 mb-1 pl-1">Travelers</label>
+                            <div class="flex items-center gap-2">
+                                <iconify-icon icon="solar:users-group-rounded-linear" class="text-zinc-400 shrink-0"></iconify-icon>
+                                <input type="number" value="1" min="1" class="bg-transparent w-full outline-none text-sm text-zinc-900 font-medium">
+                            </div>
+                        </div>
+                        <div class="w-1/2 pl-3">
+                            <label class="block text-[10px] uppercase tracking-wider font-semibold text-zinc-400 mb-1">Total Cost</label>
+                            <div class="flex items-center">
+                                <span class="text-zinc-400 text-sm mr-1">$</span>
+                                <input type="text" placeholder="0" class="bg-transparent w-full outline-none text-sm text-zinc-900 font-medium">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action -->
+                    <div class="lg:col-span-2">
+                        <button type="button" class="w-full h-full min-h-[60px] lg:min-h-0 bg-zinc-900 hover:bg-blue-600 text-white rounded-xl font-medium text-sm flex items-center justify-center gap-2 transition-all shadow-xl shadow-zinc-900/5 group">
+                            <span>Get Quote</span>
+                            <iconify-icon icon="solar:arrow-right-linear" class="group-hover:translate-x-0.5 transition-transform"></iconify-icon>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Trust Indicators -->
+            <div class="mt-12 pt-8 border-t border-zinc-100 flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                <div class="flex items-center gap-2 font-semibold text-zinc-800 tracking-tighter text-lg">
+                    <iconify-icon icon="solar:shield-check-linear" class="text-blue-600"></iconify-icon> GENERALI
+                </div>
+                <div class="flex items-center gap-2 font-semibold text-zinc-800 tracking-tighter text-lg">
+                    <iconify-icon icon="solar:star-circle-linear" class="text-yellow-500"></iconify-icon> Trustpilot
+                </div>
+                <div class="flex items-center gap-2 font-semibold text-zinc-800 tracking-tighter text-lg">
+                    <iconify-icon icon="solar:lock-password-linear" class="text-green-600"></iconify-icon> SSL Secure
+                </div>
+                <div class="flex items-center gap-2 font-semibold text-zinc-800 tracking-tighter text-lg">
+                    <iconify-icon icon="solar:medal-ribbon-star-linear" class="text-purple-600"></iconify-icon> BBB Accredited
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- How It Works -->
+    <section class="bg-zinc-50 border-y border-zinc-200 py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-2xl font-semibold tracking-tight text-zinc-900 mb-3">Coverage in 3 Simple Steps</h2>
+                <p class="text-zinc-500 font-light">We've simplified the insurance process so you can focus on packing.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                <!-- Connector Line -->
+                <div class="hidden md:block absolute top-12 left-1/6 right-1/6 h-px bg-gradient-to-r from-transparent via-zinc-300 to-transparent border-t border-dashed border-zinc-300 z-0"></div>
+
+                <!-- Step 1 -->
+                <div class="relative z-10 flex flex-col items-center text-center group">
+                    <div class="w-24 h-24 rounded-2xl bg-white border border-zinc-200 shadow-sm flex items-center justify-center mb-6 group-hover:-translate-y-2 transition-transform duration-300">
+                        <iconify-icon icon="solar:clipboard-list-linear" width="40" class="text-blue-600"></iconify-icon>
+                    </div>
+                    <h3 class="font-medium text-zinc-900 mb-2">1. Get a Quote</h3>
+                    <p class="text-sm text-zinc-500 leading-relaxed px-4">Enter your trip details to see a personalized plan recommendation instantly.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative z-10 flex flex-col items-center text-center group">
+                    <div class="w-24 h-24 rounded-2xl bg-white border border-zinc-200 shadow-sm flex items-center justify-center mb-6 group-hover:-translate-y-2 transition-transform duration-300">
+                        <iconify-icon icon="solar:card-search-linear" width="40" class="text-indigo-600"></iconify-icon>
+                    </div>
+                    <h3 class="font-medium text-zinc-900 mb-2">2. Review Plan</h3>
+                    <p class="text-sm text-zinc-500 leading-relaxed px-4">Transparent coverage details with no hidden clauses. Know exactly what's protected.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative z-10 flex flex-col items-center text-center group">
+                    <div class="w-24 h-24 rounded-2xl bg-white border border-zinc-200 shadow-sm flex items-center justify-center mb-6 group-hover:-translate-y-2 transition-transform duration-300">
+                        <iconify-icon icon="solar:verified-check-linear" width="40" class="text-green-600"></iconify-icon>
+                    </div>
+                    <h3 class="font-medium text-zinc-900 mb-2">3. Instant Protection</h3>
+                    <p class="text-sm text-zinc-500 leading-relaxed px-4">Receive your policy documents via email immediately after secure payment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Coverage Grid -->
+    <section class="max-w-6xl mx-auto px-6 py-24">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+            <div>
+                <h2 class="text-3xl font-semibold tracking-tight text-zinc-900 mb-2">Premium Coverage Benefits</h2>
+                <p class="text-zinc-500 font-light">Designed for the unpredictability of modern travel.</p>
+            </div>
+            <a href="#" class="text-sm font-medium text-blue-600 hover:text-blue-700 flex items-center gap-1 mt-4 md:mt-0 px-4 py-2 bg-blue-50 rounded-lg transition-colors">
+                Download Policy Sample <iconify-icon icon="solar:file-download-linear"></iconify-icon>
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <!-- Medical - Large Feature -->
+            <div class="md:col-span-2 bg-white rounded-3xl p-8 border border-zinc-100 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                <div class="absolute top-0 right-0 p-8 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity">
+                    <iconify-icon icon="solar:medical-kit-linear" width="200" height="200"></iconify-icon>
+                </div>
+                <div class="relative z-10">
+                    <div class="w-12 h-12 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center mb-6">
+                        <iconify-icon icon="solar:heart-pulse-linear" width="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-medium text-zinc-900 mb-3">Emergency Medical &amp; Evacuation</h3>
+                    <div class="flex gap-4 mb-4 text-xs font-medium text-zinc-500">
+                        <span class="bg-zinc-100 px-2 py-1 rounded">Up to $50,000 Medical</span>
+                        <span class="bg-zinc-100 px-2 py-1 rounded">Up to $250,000 Evacuation</span>
+                    </div>
+                    <p class="text-sm text-zinc-500 leading-relaxed max-w-lg">
+                        We cover medical and dental treatment for sickness or injury occurring during your trip. If adequate treatment isn't available locally, we coordinate and pay for emergency medical evacuation to the nearest appropriate facility.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Baggage - Tall Feature -->
+            <div class="md:row-span-2 bg-zinc-900 rounded-3xl p-8 text-white relative overflow-hidden flex flex-col justify-between group">
+                <div class="absolute inset-0 bg-gradient-to-br from-zinc-800 to-black opacity-50"></div>
+                <div class="relative z-10">
+                    <div class="w-12 h-12 rounded-2xl bg-zinc-800 flex items-center justify-center text-white mb-6 border border-zinc-700">
+                        <iconify-icon icon="solar:case-round-minimalistic-linear" width="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3">Baggage Protection</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed mb-6">
+                        Reimbursement for lost, damaged, or stolen luggage. Includes BagAssist™ to help track delayed items worldwide.
+                    </p>
+                    <ul class="space-y-3 text-sm text-zinc-300">
+                        <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" class="text-blue-500"></iconify-icon> Loss/Damage: $1,000</li>
+                        <li class="flex items-center gap-2"><iconify-icon icon="solar:check-circle-linear" class="text-blue-500"></iconify-icon> Delay: $200 (12+ hrs)</li>
+                    </ul>
+                </div>
+                <div class="relative z-10 mt-8 pt-6 border-t border-zinc-800">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-green-500/20 text-green-400 p-1.5 rounded-full">
+                            <iconify-icon icon="solar:shield-check-linear"></iconify-icon>
+                        </div>
+                        <span class="text-xs font-medium">24/7 Global Tracking Assistance</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cancellation -->
+            <div class="bg-white rounded-3xl p-8 border border-zinc-100 shadow-sm hover:shadow-md transition-shadow group">
+                <div class="w-12 h-12 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center mb-6">
+                    <iconify-icon icon="solar:calendar-mark-linear" width="24"></iconify-icon>
+                </div>
+                <h3 class="text-lg font-medium text-zinc-900 mb-2">Trip Cancellation</h3>
+                <p class="text-sm text-zinc-500 leading-relaxed">
+                    100% refund of non-refundable trip costs if you must cancel for a covered reason (Sickness, Weather, Work, etc.).
+                </p>
+            </div>
+
+            <!-- Delay -->
+            <div class="bg-white rounded-3xl p-8 border border-zinc-100 shadow-sm hover:shadow-md transition-shadow group">
+                <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6">
+                    <iconify-icon icon="solar:clock-circle-linear" width="24"></iconify-icon>
+                </div>
+                <h3 class="text-lg font-medium text-zinc-900 mb-2">Travel Delay</h3>
+                <p class="text-sm text-zinc-500 leading-relaxed">
+                    Reimbursement for meals and accommodation up to $150/day if your travel is delayed for 6+ hours.
+                </p>
+            </div>
+            
+             <!-- Sports/Addon -->
+             <div class="bg-white rounded-3xl p-8 border border-zinc-100 shadow-sm hover:shadow-md transition-shadow group">
+                <div class="w-12 h-12 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center mb-6">
+                    <iconify-icon icon="solar:running-linear" width="24"></iconify-icon>
+                </div>
+                <h3 class="text-lg font-medium text-zinc-900 mb-2">Sporting Equipment</h3>
+                <p class="text-sm text-zinc-500 leading-relaxed">
+                    Coverage for loss, theft, or damage to sporting gear (Golf clubs, Skis) plus rental fees if yours are delayed.
+                </p>
+            </div>
+
+             <!-- Assistance -->
+             <div class="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-3xl p-8 text-white shadow-lg shadow-blue-900/20 group">
+                <div class="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center mb-6 backdrop-blur-sm">
+                    <iconify-icon icon="solar:headset-linear" width="24"></iconify-icon>
+                </div>
+                <h3 class="text-lg font-medium mb-2">24/7 Hotline</h3>
+                <p class="text-sm text-blue-100 leading-relaxed">
+                    Multilingual support for medical referrals, legal aid, translation services, and emergency cash transfers.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Legal/Policy Disclosure Section (Expanded) -->
+    <section class="border-t border-zinc-100 bg-zinc-50/80">
+        <div class="max-w-6xl mx-auto px-6 py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Sidebar -->
+                <div class="lg:col-span-4 space-y-8">
+                    <div>
+                        <h2 class="text-2xl font-semibold tracking-tight text-zinc-900 mb-4">Underwriting &amp; Partners</h2>
+                        <p class="text-sm text-zinc-500 leading-relaxed mb-6">
+                            Transparency is our policy. Our plans are backed by industry leaders with over 100 years of experience.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-2xl border border-zinc-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3 pb-3 border-b border-zinc-100">
+                            <div class="bg-zinc-100 p-2 rounded-lg text-zinc-600">
+                                <iconify-icon icon="solar:document-text-linear" width="20"></iconify-icon>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-zinc-900">Generali U.S. Branch</h4>
+                                <p class="text-[10px] text-zinc-500 uppercase tracking-wide">Underwriter</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-zinc-500 leading-relaxed">
+                            Generali U.S. Branch, New York, NY; NAIC # 11231. Operating in the US since 1935.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-2xl border border-zinc-200 shadow-sm">
+                        <div class="flex items-center gap-3 mb-3 pb-3 border-b border-zinc-100">
+                            <div class="bg-zinc-100 p-2 rounded-lg text-zinc-600">
+                                <iconify-icon icon="solar:user-hand-up-linear" width="20"></iconify-icon>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-zinc-900">CSA Travel Protection</h4>
+                                <p class="text-[10px] text-zinc-500 uppercase tracking-wide">Administrator</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-zinc-500 leading-relaxed">
+                            Dedicated claims handling and plan administration based in San Diego, California.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Main Content Area -->
+                <div class="lg:col-span-8 space-y-10">
+                    
+                    <!-- Important Notice -->
+                    <div class="bg-amber-50/50 border border-amber-100 rounded-2xl p-6">
+                        <h3 class="font-medium text-amber-900 flex items-center gap-2 mb-3">
+                            <iconify-icon icon="solar:bell-linear"></iconify-icon>
+                            Important Policy Information
+                        </h3>
+                        <p class="text-sm text-amber-900/70 leading-relaxed">
+                            This plan provides insurance coverage that only applies during the covered trip. You may have coverage from other sources that provides you with similar benefits but may be subject to different restrictions depending upon your other coverages. You may wish to compare the terms of this policy with your existing life, health, home, and automobile insurance policies.
+                        </p>
+                    </div>
+
+                    <!-- Accordion Details -->
+                    <div class="space-y-6">
+                        <div class="group">
+                            <h4 class="text-sm font-semibold text-zinc-900 mb-2 flex items-center gap-2">
+                                <iconify-icon icon="solar:refresh-circle-linear" class="text-blue-600"></iconify-icon>
+                                10-Day Free Look Period
+                            </h4>
+                            <p class="text-sm text-zinc-500 leading-relaxed pl-6 border-l-2 border-zinc-200">
+                                We are committed to your satisfaction. If you are not completely satisfied with the plan, you may cancel it within 10 days of purchase for a full refund of the plan cost, provided you have not filed a claim or departed on your trip.
+                            </p>
+                        </div>
+
+                        <div class="group">
+                            <h4 class="text-sm font-semibold text-zinc-900 mb-2 flex items-center gap-2">
+                                <iconify-icon icon="solar:danger-circle-linear" class="text-blue-600"></iconify-icon>
+                                Pre-Existing Medical Conditions
+                            </h4>
+                            <p class="text-sm text-zinc-500 leading-relaxed pl-6 border-l-2 border-zinc-200">
+                                Pre-existing medical conditions may be excluded from coverage unless you purchase the plan within/prior to final trip payment and are medically able to travel at the time of purchase. Please review the full Description of Coverage for definitions and waiver requirements.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- State Specific Grid -->
+                    <div>
+                        <h3 class="text-sm font-semibold text-zinc-900 mb-4 pb-2 border-b border-zinc-200">State Specific Disclosures</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="bg-white p-4 rounded-xl border border-zinc-200">
+                                <span class="text-[10px] font-bold text-zinc-400 uppercase tracking-wider mb-1 block">New York</span>
+                                <p class="text-[11px] text-zinc-500 leading-relaxed">
+                                    The insurance producer represents the insurer. Compensation is based on the insurance contract selected.
+                                </p>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl border border-zinc-200">
+                                <span class="text-[10px] font-bold text-zinc-400 uppercase tracking-wider mb-1 block">Maryland</span>
+                                <p class="text-[11px] text-zinc-500 leading-relaxed">
+                                    This insurance is primary. The purchase of travel insurance is not required to purchase any other product or service.
+                                </p>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl border border-zinc-200">
+                                <span class="text-[10px] font-bold text-zinc-400 uppercase tracking-wider mb-1 block">California</span>
+                                <p class="text-[11px] text-zinc-500 leading-relaxed">
+                                    Produced by Generali Global Assistance &amp; Insurance Services. CA License #0D26305.
+                                </p>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl border border-zinc-200">
+                                <span class="text-[10px] font-bold text-zinc-400 uppercase tracking-wider mb-1 block">General Fraud Warning</span>
+                                <p class="text-[11px] text-zinc-500 leading-relaxed">
+                                    Any person who knowingly presents a false or fraudulent claim for payment of a loss or benefit is guilty of a crime.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comprehensive Footer & Legal Block -->
+    <footer class="bg-zinc-950 text-zinc-400 pt-20 pb-10 border-t border-zinc-900">
+        <div class="max-w-6xl mx-auto px-6">
+            
+            <!-- Main Footer Links -->
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-x-8 gap-y-12 mb-20">
+                <div class="lg:col-span-2 pr-10">
+                    <div class="flex items-center gap-2 text-white mb-6">
+                        <iconify-icon icon="solar:shield-star-linear" width="24"></iconify-icon>
+                        <span class="font-semibold tracking-tight text-xl">Wizfair</span>
+                    </div>
+                    <p class="text-sm font-light text-zinc-500 mb-8 leading-relaxed">
+                        Wizfair simplifies travel insurance with transparent policies, instant quotes, and human-centric support. Travel fearlessly.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-zinc-900 hover:bg-zinc-800 text-white transition-colors border border-zinc-800"><iconify-icon icon="solar:camera-linear"></iconify-icon></a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-zinc-900 hover:bg-zinc-800 text-white transition-colors border border-zinc-800"><iconify-icon icon="brandico:twitter-bird" width="14"></iconify-icon></a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-zinc-900 hover:bg-zinc-800 text-white transition-colors border border-zinc-800"><iconify-icon icon="brandico:linkedin" width="14"></iconify-icon></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h5 class="text-white font-medium text-sm mb-6">Product</h5>
+                    <ul class="space-y-4 text-xs font-light">
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Get a Quote</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Coverage Details</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Medical Protection</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Baggage Insurance</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="text-white font-medium text-sm mb-6">Support</h5>
+                    <ul class="space-y-4 text-xs font-light">
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">File a Claim</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Modify Policy</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="text-white font-medium text-sm mb-6">Legal</h5>
+                    <ul class="space-y-4 text-xs font-light">
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Accessibility</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Massive Legal Text Block (The "Full Content") -->
+            <div class="bg-zinc-900/50 rounded-xl p-6 mb-12 border border-zinc-800">
+                <p class="text-[10px] text-zinc-600 leading-relaxed text-justify">
+                    <strong>Disclaimer:</strong> Travel insurance plans are administered by Customized Services Administrators, Inc., d/b/a Generali Global Assistance &amp; Insurance Services (CA License #0D26305, TX License #1752625). Plans are available to residents of the United States. Benefits and services are described on a general basis; certain conditions and exclusions apply. Travel Retailers may not be licensed to sell insurance in all states, and are not authorized to answer technical questions about the benefits, exclusions, and conditions of this insurance and cannot evaluate the adequacy of your existing insurance. This plan provides insurance coverage that applies only during the covered trip. You may have coverage from other sources that provides you with similar benefits but may be subject to different restrictions depending upon your other coverages. You may wish to compare the terms of this policy with your existing life, health, home and automobile policies. The purchase of this plan is not required in order to purchase any other travel product or service offered to you by your travel retailers.
+                </p>
+                <p class="text-[10px] text-zinc-600 leading-relaxed text-justify mt-3">
+                    <strong>Underwriting:</strong> Travel insurance coverages are underwritten by: Generali U.S. Branch, New York, NY; NAIC # 11231. Generali US Branch is admitted or licensed to do business in all states and the District of Columbia.
+                </p>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-zinc-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-zinc-600 uppercase tracking-widest font-medium">
+                <div>© 2024 Wizfair Travels. All rights reserved.</div>
+                <div class="flex items-center gap-8">
+                    <span>CST# 2157532-40</span>
+                    <span>IATA Accredited</span>
+                    <span>ARC Verified</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body></html>
